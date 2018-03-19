@@ -45,7 +45,7 @@ public class VendingMachine {
     }
 
     public void printReciept(){
-        System.out.println("Date: " + date.toString() + "\nCans'n'Bottles: " + countItems + "\nMonays: " + getCountMonays());
+        System.out.println("Date: " + date.toString() + "\nCans'n'Bottles: " + countItems + "\nMonays: " + countMonays);
         clear();
     }
 

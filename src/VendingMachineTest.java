@@ -17,7 +17,7 @@ public class VendingMachineTest {
 
         //test of static datafields
         System.out.println("\n" + object.getCountItems());
-        System.out.println(object.getCountMonays());
+        System.out.println(object.getCountMonays() + "\n");
 
         //Reciept
         object.printReciept();
@@ -26,6 +26,8 @@ public class VendingMachineTest {
         System.out.println("\n" + object.getPantlist());
         System.out.println(object.getCountMonays());
         System.out.println(object.getCountItems());
+        //or
+        object.printReciept();
 
     }
 }

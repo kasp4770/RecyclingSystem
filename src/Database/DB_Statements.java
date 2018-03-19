@@ -10,8 +10,9 @@ public class DB_Statements {
     private static ResultSet rs = null;
     private static PreparedStatement pst = null;
 
-    public void retrieveData(char type) {
+    public double retrievePrice(char type) {
 
+        double price = 0;
         String query = "select refund_price from recycling_types where LOWER(recycling_char) = LOWER('" + type + "');";
 
         try{
@@ -23,12 +24,7 @@ public class DB_Statements {
 
             //  Return all rows from the table  //COPY/PASTE FRA ANDET PROJEKT. SKAL RETTES HERFRA.
             while(rs.next()) {
-                byte[] st = (byte[]) rs.getObject(2);
-                ByteArrayInputStream baip = new ByteArrayInputStream(st);
-                ObjectInputStream ois = new ObjectInputStream(baip);
-                Employee emp = (Employee) ois.readObject();
-                System.out.println("\n" + emp.toString());
-
+                price = rs.getDouble(1);
             }
 
             System.out.println("\n--Retrieve executed--");
@@ -38,5 +34,6 @@ public class DB_Statements {
             e.printStackTrace();
             System.out.println("\n--Retrieve did not execute--");
         }
+        return price;
     }
 }

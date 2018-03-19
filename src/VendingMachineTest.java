@@ -1,13 +1,18 @@
+import Database.*;
+
 public class VendingMachineTest {
     public static void main(String[] args) {
+
+        //Inititalize database
+        DB_Statements statements = new DB_Statements();
 
         //Get Singleton object
         VendingMachine object = VendingMachine.getInstance();
 
         //Add items to the list of the VendingMachine object.
-        Item item1 = new Item(Types.A, 1.0);
-        Item item2 = new Item(Types.B, 1.5);
-        Item item3 = new Item(Types.C, 3.0);
+        Item item1 = new Item(Types.A);
+        Item item2 = new Item(Types.B);
+        Item item3 = new Item(Types.C);
         object.add(item1);
         object.add(item2);
         object.add(item3);

@@ -1,12 +1,12 @@
-public enum Types {A("A"), B("B"), C("C");
+public enum Types {A('A'), B('B'), C('C');
 
-private String type;
+private char type;
 
-Types(String type){
+Types(char type){
     this.type = type;
 }
 
-public String getType(){
+public char getType(){
     return this.type;
 }
 }

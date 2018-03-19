@@ -4,7 +4,7 @@ public class Item {
 
     private Types type;
     private double price;
-    protected DB_Statements statements;
+    protected DB_Statements statements = new DB_Statements();
 
     public Item(Types type) {
         this.type = type;
@@ -30,7 +30,7 @@ public class Item {
     public String toString() {
         return "Item{" +
                 "type=" + type +
-                ", price=" + price +
+                ", price=" + getPrice() +
                 '}';
     }
 }

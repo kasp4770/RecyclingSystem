@@ -19,9 +19,7 @@ public class Item {
     }
 
     public double getPrice() {
-        statements.retrievePrice(this.getType());
-
-        return price;
+        return statements.retrievePrice(this.getType());
     }
 
     public void setPrice(double price) {

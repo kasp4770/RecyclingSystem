@@ -5,7 +5,7 @@ public class VendingMachine {
 
     //create an object of Singleton
     private static VendingMachine instance = new VendingMachine();
-
+    //other data
     private static ArrayList<Item> pantlist;
     private Date date;
     private static double countMonays = 0.0;
@@ -17,19 +17,24 @@ public class VendingMachine {
         date = new Date();
     }
 
+    //gets the only object available
     public static VendingMachine getInstance(){
         return instance;
     }
 
+    //iterates the arraylist and prints toString() of the objects within the list
     public ArrayList<Item> getPantlist(){
         return pantlist;
     }
 
+    //add pant item to arraylist pantlist
     public void add(Item item){
         pantlist.add(item);
         countMonays = countMonays + item.getPrice();
         countItems++;
     }
+
+    //Clears the pantlist and counts of money and inserted bottles and cans
     public void clear(){
         pantlist.clear();
         countMonays = 0.0;
@@ -44,6 +49,7 @@ public class VendingMachine {
         return countItems;
     }
 
+    //Constructs a reciept with information from the pantlist
     public void printReciept(){
 
         int countA = 0;
@@ -64,8 +70,9 @@ public class VendingMachine {
         clear();
     }
 
+    //A welcome message from the vendingmachine
     public void showMessage(){
-        System.out.println("This is a vendingmachine. Insert your cans or bottles, and retrieve monays for it.");
+        System.out.println("This is a vendingmachine. Insert your cans or bottles, get a reciept and retrieve monays for it.");
     }
 
 }

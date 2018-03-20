@@ -70,6 +70,9 @@ public class VendingMachine {
                 "\nExchange to monays: " + countMonays);
         System.out.println("Pant A: " + countA + "\nPant B: " + countB + "\nPant C: " + countC);
         clear();
+        /*return "-- Your receipt -- \nDate: " + date.toString() + "\nCans'n'Bottles: " + String.valueOf(countItems) +
+                "\nExchange to monays: " + String.valueOf(countMonays) + "\nPant A: " + String.valueOf(countA) +
+                "\nPant B: " + String.valueOf(countB) + "\nPant C: " + String.valueOf(countC);*/
     }
 
     //A welcome message from the vendingmachine

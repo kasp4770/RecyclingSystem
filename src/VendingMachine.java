@@ -45,7 +45,7 @@ public class VendingMachine {
     }
 
     public void printReciept(){
-        System.out.println("Date: " + date.toString() + "\nCans'n'Bottles: " + countItems + "\nMonays: " + countMonays);
+
         int countA = 0;
         int countB = 0;
         int countC = 0;
@@ -58,6 +58,8 @@ public class VendingMachine {
                 countC++;
             }
         }
+        System.out.println("-- Your reciept --\nDate: " + date.toString() + "\nCans'n'Bottles: " + countItems +
+                "\nExchange to monays: " + countMonays);
         System.out.println("Pant A: " + countA + "\nPant B: " + countB + "\nPant C: " + countC);
         clear();
     }

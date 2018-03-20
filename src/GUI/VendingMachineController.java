@@ -4,49 +4,71 @@ import Database.DB_Statements;
 import Model.Item;
 import Model.Types;
 import Model.VendingMachine;
-import javafx.application.Application;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
+import java.io.IOException;
 
-public class VendingMachineController extends Application{
+public class VendingMachineController extends AnchorPane{
 
     @FXML
     AnchorPane MainScreen;
     @FXML
-    Label lblReciept;
+    private static TextArea txtReciept;
     @FXML
-    Label lblCountMonays;
+    private static TextField txtCountMonays;
     @FXML
-    Button btnPantA1, btnPantA2, btnPantB, btnPantC, btnPrintReceipt;
+    private Button btnPantA1, btnPantA2, btnPantB, btnPantC, btnPrintReceipt;
+
+    public VendingMachineController(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VendingMachine.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+        try{
+            fxmlLoader.load();
+        }catch (IOException exception){
+            throw new RuntimeException(exception);
+        }
+    }
+
+    public String getText() {
+        return textProperty().get();
+    }
+
+    public String getTextArea(){
+        return textAreaProperty().get();
+    }
+
+    public void setText(String value, Node node) {
+        if(node == txtCountMonays){
+        textProperty().set(value);
+        }else if(node == txtReciept){
+            textAreaProperty().setValue(value);
+        }
+    }
+
+    public StringProperty textProperty() {
+        return txtCountMonays.textProperty();
+    }
+    public StringProperty textAreaProperty(){
+        return  txtReciept.textProperty();
+    }
+
     DB_Statements statements = new DB_Statements();
     VendingMachine object = VendingMachine.getInstance();
 
-
-    public void start(Stage stage)throws Exception{
-
-        //lblReciept.setStyle("-fx-border-color: #000; -fx-padding: 5px;");
-        //lblCountMonays.setStyle("-fx-border-color: #000; -fx-padding: 5px;");
-        Parent root = FXMLLoader.load(getClass().getResource("VendingMachine.fxml"));
-        Scene scene = new Scene(root, 600, 335);
-        stage.setTitle("Vending Machine 1.0");
-        stage.setScene(scene);
-        stage.show();
-
-    }
+    @FXML
     public void btnCode(ActionEvent event){
 
         if(event.getSource()==btnPantA1){
             Item item = new Item(Types.A);
-            lblCountMonays.setText(String.valueOf(object.getCountMonays()));
+            txtCountMonays.setText(String.valueOf(object.getCountMonays()));
         }
         else if (event.getSource()==btnPantA2){
         }
@@ -55,11 +77,8 @@ public class VendingMachineController extends Application{
         else if (event.getSource()==btnPantC){
         }
         else if (event.getSource()==btnPrintReceipt){
-            lblReciept.isWrapText();
+            txtReciept.isWrapText();
             //lblReciept.(object.printReceipt());
         }
-    }
-
-    public static void main(String[] args) { launch(args);
     }
 }

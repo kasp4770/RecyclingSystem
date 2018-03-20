@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -49,8 +51,8 @@ public class VendingMachine {
         return countItems;
     }
 
-    //Constructs a reciept with information from the pantlist
-    public void printReciept(){
+    //Constructs a receipt with information from the pantlist
+    public void printReceipt(){
 
         int countA = 0;
         int countB = 0;
@@ -71,8 +73,8 @@ public class VendingMachine {
     }
 
     //A welcome message from the vendingmachine
-    public void showMessage(){
-        System.out.println("This is a vendingmachine. Insert your cans or bottles, get a reciept and retrieve monays for it.");
+    public String showMessage(){
+        return "This is a vendingmachine. Insert your cans or bottles, get a reciept and retrieve monays for it.";
     }
 
 }

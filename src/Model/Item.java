@@ -1,3 +1,5 @@
+package Model;
+
 import Database.DB_Statements;
 
 public class Item {
@@ -12,7 +14,7 @@ public class Item {
         VendingMachine.getInstance().add(this);
     }
 
-    //Returns the type of pant, A, B or C from the enum Types class
+    //Returns the type of pant, A, B or C from the enum Model.Types class
     public char getType() {
         return type.getType();
     }

@@ -1,5 +1,6 @@
+package Model;
+
 import Database.*;
-import java.sql.*;
 
 public class VendingMachineTest {
     public static void main(String[] args) {
@@ -10,12 +11,12 @@ public class VendingMachineTest {
         //Get Singleton object
         VendingMachine object = VendingMachine.getInstance();
 
-        //Add items to the list of the VendingMachine object (automatic within the Item constructor).
+        //Add items to the list of the Model.VendingMachine object (automatic within the Model.Item constructor).
         Item item1 = new Item(Types.A);
         Item item2 = new Item(Types.B);
         Item item3 = new Item(Types.C);
 
-        //test of Item toString() method.
+        //test of Model.Item toString() method.
         System.out.println(object.getPantlist());
 
         //test of static datafields
@@ -23,7 +24,7 @@ public class VendingMachineTest {
         System.out.println(object.getCountMonays() + "\n");
 
         //Reciept
-        object.printReciept();
+        object.printReceipt();
 
         //Test that the printReciept() method cleared the pantlist and reset the static datafields.
         System.out.println("\n-- TEST THAT IT WORKS: ... --");
@@ -32,6 +33,6 @@ public class VendingMachineTest {
         System.out.println(object.getCountMonays());
         System.out.println(object.getCountItems());
         //or
-        object.printReciept();
+        object.printReceipt();
     }
 }

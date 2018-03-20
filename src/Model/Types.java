@@ -1,3 +1,5 @@
+package Model;
+
 public enum Types {A('A'), B('B'), C('C');
 
 private char type;

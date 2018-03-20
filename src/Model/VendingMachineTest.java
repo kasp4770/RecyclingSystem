@@ -5,7 +5,7 @@ import Database.*;
 import java.sql.Connection;
 
 public class VendingMachineTest {
-   /* public static void main(String[] args) {
+    public static void main(String[] args) {
 
         //Inititalize database
         DB_Statements statements = new DB_Statements();
@@ -38,5 +38,5 @@ public class VendingMachineTest {
         object.printReceipt();
         DB_Statements.con = null;
 
-    }*/
+    }
 }

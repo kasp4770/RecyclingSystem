@@ -77,7 +77,7 @@ public class VendingMachine {
 
     //A welcome message from the vendingmachine
     public String showMessage(){
-        return "This is a vendingmachine. Insert your cans or bottles, get a reciept and retrieve monays for it.";
+        return "This is a vendingmachine. Insert your cans or bottles, get a reciept and exchange it for monays.";
     }
 
 }

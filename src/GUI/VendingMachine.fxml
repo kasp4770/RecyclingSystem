@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <fx:root type="javafx.scene.layout.AnchorPane" id="MainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
       <Button fx:id="btnPantA1" layoutX="38.0" layoutY="264.0" minWidth="78.0" mnemonicParsing="false" text="Can" />
       <Button fx:id="btnPantA2" layoutX="208.0" layoutY="264.0" mnemonicParsing="false" text="Bottle &lt; 1 L" />
       <Button fx:id="btnPrintReceipt" layoutX="398.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnCode" prefHeight="25.0" prefWidth="147.0" text="Green button" />
@@ -17,5 +16,4 @@
       <Button fx:id="btnPantB" layoutX="123.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Bottle 0.5 L" />
       <TextArea fx:id="txtReciept" layoutX="38.0" layoutY="68.0" prefHeight="189.0" prefWidth="333.0" />
       <TextField fx:id="txtCountMonays" layoutX="397.0" layoutY="68.0" />
-   </children>
 </fx:root>

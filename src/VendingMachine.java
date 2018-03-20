@@ -46,6 +46,19 @@ public class VendingMachine {
 
     public void printReciept(){
         System.out.println("Date: " + date.toString() + "\nCans'n'Bottles: " + countItems + "\nMonays: " + countMonays);
+        int countA = 0;
+        int countB = 0;
+        int countC = 0;
+        for(int i = 0; i < pantlist.size(); i++){
+            if(pantlist.get(i).getType() == 'A'){
+                countA++;
+            }else if(pantlist.get(i).getType() == 'B'){
+                countB++;
+            }else if(pantlist.get(i).getType() == 'C'){
+                countC++;
+            }
+        }
+        System.out.println("Pant A: " + countA + "\nPant B: " + countB + "\nPant C: " + countC);
         clear();
     }
 

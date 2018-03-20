@@ -22,7 +22,7 @@ public class DB_Statements {
             //  Execute the ResultSet
             rs = stmt.executeQuery(query);
 
-            //  Return all rows from the table  //COPY/PASTE FRA ANDET PROJEKT. SKAL RETTES HERFRA.
+            //  Return all rows from the table
             while(rs.next()) {
                 price = rs.getDouble(1);
             }

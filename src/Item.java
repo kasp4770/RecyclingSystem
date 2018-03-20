@@ -8,29 +8,22 @@ public class Item {
 
     public Item(Types type) {
         this.type = type;
+        VendingMachine.getInstance().add(this);
     }
 
     public char getType() {
         return type.getType();
     }
 
-    public void setType(Types type) {
-        this.type = type;
-    }
-
     public double getPrice() {
         return statements.retrievePrice(this.getType());
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
-        return "Item{" +
-                "type=" + type +
-                ", price=" + getPrice() +
-                '}';
+        return "Pant: " +
+                "type= " + type +
+                ", price= " + getPrice() +
+                "\n";
     }
 }

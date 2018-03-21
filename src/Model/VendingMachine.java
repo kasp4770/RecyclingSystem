@@ -16,7 +16,6 @@ public class VendingMachine {
     //Constructor is private so it can not be intantiated
     private VendingMachine(){
         pantlist = new ArrayList<>();
-        date = new Date();
     }
 
     //gets the only object available
@@ -52,8 +51,8 @@ public class VendingMachine {
     }
 
     //Constructs a receipt with information from the pantlist
-    public void printReceipt(){
-
+    public String printReceipt(){
+        date = new Date();
         int countA = 0;
         int countB = 0;
         int countC = 0;
@@ -66,13 +65,13 @@ public class VendingMachine {
                 countC++;
             }
         }
-        System.out.println("-- Your reciept --\nDate: " + date.toString() + "\nCans'n'Bottles: " + countItems +
+        /*System.out.println("\n-- Your reciept --\nDate: " + date.toString() + "\nCans'n'Bottles: " + countItems +
                 "\nExchange to monays: " + countMonays);
-        System.out.println("Pant A: " + countA + "\nPant B: " + countB + "\nPant C: " + countC);
-        clear();
-        /*return "-- Your receipt -- \nDate: " + date.toString() + "\nCans'n'Bottles: " + String.valueOf(countItems) +
-                "\nExchange to monays: " + String.valueOf(countMonays) + "\nPant A: " + String.valueOf(countA) +
-                "\nPant B: " + String.valueOf(countB) + "\nPant C: " + String.valueOf(countC);*/
+        System.out.println("Pant A: " + countA + "\nPant B: " + countB + "\nPant C: " + countC);*/
+
+        return "-- Your receipt -- \nDate: " + date.toString() + "\nCans'n'Bottles: " + String.valueOf(countItems) +
+                "\nMonays to exchange: " + String.valueOf(countMonays) +" DDK" + "\nPant A: " + String.valueOf(countA) +
+                "\nPant B: " + String.valueOf(countB) + "\nPant C: " + String.valueOf(countC);
     }
 
     //A welcome message from the vendingmachine

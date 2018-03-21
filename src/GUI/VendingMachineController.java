@@ -67,17 +67,24 @@ public class VendingMachineController extends AnchorPane{
     public void btnCode(ActionEvent event){
 
         if(event.getSource()==btnPantA1){
-            Item item = new Item(Types.A);
-            txtCountMonays.setText(String.valueOf(object.getCountMonays()));
+            System.out.println("PantA button works!");
+            //txtCountMonays.setEditable(false);
+            //Item item = new Item(Types.A);
+            //txtCountMonays.setText(String.valueOf(object.getCountMonays()));
         }
         else if (event.getSource()==btnPantA2){
+            System.out.println("PantA2 button works!");
         }
         else if (event.getSource()==btnPantB){
+            System.out.println("PantB button works!");
         }
         else if (event.getSource()==btnPantC){
+            System.out.println("PantC button works!");
         }
         else if (event.getSource()==btnPrintReceipt){
-            txtReciept.isWrapText();
+            System.out.println("Print receipt button works!");
+            //txtReciept.setEditable(false);
+            //txtReciept.isWrapText();
             //lblReciept.(object.printReceipt());
         }
     }

@@ -23,19 +23,20 @@ public class VendingMachineTest {
 
         //test of static datafields
         System.out.println("\n" + object.getCountItems());
-        System.out.println(object.getCountMonays() + "\n");
+        System.out.println(object.getCountMoney() + "\n");
 
         //Reciept
-        object.printReceipt();
+        System.out.println(object.printReceipt());
+        object.clear();
 
         //Test that the printReciept() method cleared the pantlist and reset the static datafields.
         System.out.println("\n-- TEST THAT IT WORKS: ... --");
 
         System.out.println("\n" + object.getPantlist());
-        System.out.println(object.getCountMonays());
+        System.out.println(object.getCountMoney());
         System.out.println(object.getCountItems());
         //or
-        object.printReceipt();
+        System.out.println(object.printReceipt());
         DB_Statements.con = null;
 
     }

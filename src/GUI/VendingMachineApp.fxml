@@ -13,7 +13,7 @@
    <children>
       <HBox prefHeight="25.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="txtCountOfMoneyOutput" alignment="CENTER_RIGHT" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Monays" text="Monay">
+            <TextField fx:id="txtCountOfMoneyOutput" alignment="CENTER_RIGHT" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" promptText="money count" text="money count">
                <HBox.margin>
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>

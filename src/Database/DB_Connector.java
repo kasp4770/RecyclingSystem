@@ -9,7 +9,7 @@ public class DB_Connector {
     // user name
     private static String user = "postgres";
     // pass word
-    private static String pass = "Password2533";
+    private static String pass = "";
     private static Connection conn = null;
 
     public static Connection connect(){

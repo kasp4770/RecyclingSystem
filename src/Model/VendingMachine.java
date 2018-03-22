@@ -8,7 +8,7 @@ public class VendingMachine {
     //create an object of Singleton
     private static VendingMachine instance = new VendingMachine();
     //other data
-    private static ArrayList<Item> pantlist;
+    public static ArrayList<Item> pantlist;
     private Date date;
     private static double countMoney = 0.0;
     private static int countItems = 0;

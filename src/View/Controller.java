@@ -1,4 +1,4 @@
-package GUI;
+package View;
 
 import Database.DB_Statements;
 import Model.Item;
@@ -9,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
 public class Controller {
 

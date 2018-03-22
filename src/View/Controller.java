@@ -32,6 +32,8 @@ public class Controller {
             String svartekst = String.valueOf(object.getCountMoney());
             txtCountOfMoneyOutput.setText(svartekst);
 
+            //txtReceiptOutput.setText(object.getPantlist().toString());
+
             //Output in console
             System.out.println("Pant A can added.    \t\tTotal inserts: " + object.getCountItems() + ".\t\tTotal value (DDK): " + object.getCountMoney());
 
@@ -43,6 +45,8 @@ public class Controller {
             String svartekst = String.valueOf(object.getCountMoney());
             txtCountOfMoneyOutput.setText(svartekst);
 
+            //txtReceiptOutput.setText(object.getPantlist().toString());
+
             //Output in console
             System.out.println("Pant A bottle added. \t\tTotal inserts: " + object.getCountItems() + ".\t\tTotal value (DDK): " + object.getCountMoney());
         }
@@ -53,6 +57,8 @@ public class Controller {
             String svartekst = String.valueOf(object.getCountMoney());
             txtCountOfMoneyOutput.setText(svartekst);
 
+            //txtReceiptOutput.setText(object.getPantlist().toString());
+
             //Output in console
             System.out.println("Pant B bottle added. \t\tTotal inserts: " + object.getCountItems() + ".\t\tTotal value (DDK): " + object.getCountMoney());
         }
@@ -60,8 +66,10 @@ public class Controller {
             //System.out.println("PantC button works!");
             Item iten = new Item(Types.C);
 
+            txtReceiptOutput.setText(object.getPantlist().toString());
+
             String svartekst = String.valueOf(object.getCountMoney());
-            txtCountOfMoneyOutput.setText(svartekst);
+            //txtCountOfMoneyOutput.setText(svartekst);
 
             //Output in console
             System.out.println("Pant C bottle added. \t\tTotal inserts: " + object.getCountItems() + ".\t\tTotal value (DDK): " + object.getCountMoney());
